@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
-import {View,  StyleSheet,  ScrollView} from 'react-native';
+import {View,  StyleSheet,  ScrollView, Text} from 'react-native';
 import CustomInPut from '../../components/CustomInPut';
 import CustomButton from '../../components/CustomButton';
 import SocialSignInButtons from '../../components/SocialSignInButtons';
 
 
-const ConfirEmailScreen = () => {
+
+const SignUpScreen = () => {
 
 
   const [username, setUsername] = useState('');
@@ -20,16 +21,19 @@ const ConfirEmailScreen = () => {
  };
 
 
- 
+ const onForgotPasswordPressed = () =>  {
+  console.warn('onForgotPasswordPressed');
+ };
 
 
  const onSignInPress = () =>  {
   console.warn('onSignInPress');
 };
+
  return (
   <ScrollView showsHorizontalScrollIndicator= {false}>
     <View style={styles.root}>
-      <Text style={styles.title}>Confirm your count  </Text>
+      <Text style={styles.title}>Create an account</Text>
 
       <CustomInPut
         placeholder="Username"
@@ -95,14 +99,9 @@ const styles =StyleSheet.create( {
   alignItems: 'center',
   padding: 20,
  },
-    logo: {
-      marginTop: 60,
-      width: '70%',
-      maxWidth: 300,
-      maxHeight: 200,
-    },
+    
 title: {
-
+  marginTop: 60,
 fontSize:24,
 fontWeight: 'bold',
 color: '#051C60',
@@ -114,4 +113,4 @@ margin: 10,
 
 
 
-export default ConfirEmailScreen;
+export default SignUpScreen;

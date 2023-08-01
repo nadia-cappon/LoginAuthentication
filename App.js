@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { SafeAreaView, StyleSheet, Text} from 'react-native';
+import SignInScreen from './src/screens/SignInScreen';
+//import SignUpScreen from './src/screens/SignUpScreen';
+//import ConfirEmailScreen from './src/screens/ConfirmEmailScreen';
 
-export default function App() {
+
+const App = () =>{
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+  
+      <SafeAreaView style={styles.root}>
+         
+          <SignInScreen/>
+         
+      </SafeAreaView>
+     
+   
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+ root:{
+  flex: 1,
+  backgroundColor: '#F9FBFC',
+ }
 });
+
+export default App;

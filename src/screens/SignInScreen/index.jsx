@@ -4,6 +4,7 @@ import logo from '../../../assets/images/png-logo-1.png';
 import CustomInPut from '../../components/CustomInPut';
 import CustomButton from '../../components/CustomButton';
 import SocialSignInButtons from '../../components/SocialSignInButtons';
+import { useNavigation } from '@react-navigation/native';
 
 const SignInScreen = () => {
 
@@ -12,31 +13,25 @@ const SignInScreen = () => {
   const [password, setPassword] = useState('');
 
   const {height} = useWindowDimensions();
-
-
+const navigation = useNavigation();
 
  const onSignInPressed = () =>  {
   console.warn('Sign in');
+
+  navigation.navigate('Home');
  };
 
 
  const onForgotPasswordPressed = () =>  {
-  console.warn('onForgotPasswordPressed');
+  navigation.navigate('ForgotPassword');
  };
 
-const onSignInFacebook = () =>  {
-  console.warn('onSignInFacebook ');
-};
 
-  const onSignInGoogle= () =>  {
-    console.warn('onSignInGoogl');
-  };
 
-    const onSignInApple= () =>  {
-      console.warn('onSignInApple');
- };
+
+
  const onSignUpPress = () =>  {
-  console.warn('onSignUpPress');
+  navigation.navigate('SignUp');
 };
  return (
   <ScrollView showsHorizontalScrollIndicator= {false}>

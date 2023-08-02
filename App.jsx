@@ -1,8 +1,8 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, Text} from 'react-native';
-import SignInScreen from './src/screens/SignInScreen';
-import SignUpScreen from './src/screens/SignUpScreen';
-import ConfirEmailScreen from './src/screens/ConfirmEmailScreen';
+
+
+import Navigation from './src/navigation';
 
 
 const App = () =>{
@@ -10,7 +10,7 @@ const App = () =>{
   
       <SafeAreaView style={styles.root}>
          
-          <ConfirEmailScreen/>
+          <Navigation/>
          
       </SafeAreaView>
      

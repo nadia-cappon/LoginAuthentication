@@ -4,22 +4,17 @@ import CustomInPut from '../../components/CustomInPut';
 import CustomButton from '../../components/CustomButton';
 
 
-const ForgotPasswordScreen = () => {
+const NewPasswordScreen = () => {
+  
+const [code, setCode] = useState('');
+const [newPassword, setNewPassword] = useState('');
+
+ const onSubmitPressed = () =>  {
+  console.warn('onSubmitPressed');
+ };
 
 
  
-  const [username, setUsername] = useState('');
-
-  
-
- const onConfirmPressed = () =>  {
-  console.warn('onConfirmPressed');
- };
-
-
- const onSendPressed = () =>  {
-  console.warn('onSendPress');
- };
 
 
  const onSignInPress = () =>  {
@@ -31,21 +26,26 @@ const ForgotPasswordScreen = () => {
       <Text style={styles.title}>Reset your password </Text>
 
       <CustomInPut
-        placeholder="Username"
-        value={username} 
-        setValue={setUsername} 
+        placeholder="Code"
+        value={code} 
+        setValue={setCode} 
         />
        
+       <CustomInPut
+        placeholder="Enter your new passeword"
+        value={newPassword} 
+        setValue={setNewPassword} 
+        />
 
-      <CustomButton
-       text="Send"
-        onPress={onSendPressed}
+     
+    
+    <CustomButton
+       text="Submit"
+        onPress={onSubmitPressed}
         bgColor="#498EDC"
         fgColor="#fff"
        
          />
-    
-    
     
 
 <CustomButton
@@ -81,4 +81,4 @@ margin: 10,
 
 
 
-export default ForgotPasswordScreen ;
+export default NewPasswordScreen ;

@@ -3,6 +3,7 @@ import {View,  StyleSheet,  ScrollView, Text} from 'react-native';
 import CustomInPut from '../../components/CustomInPut';
 import CustomButton from '../../components/CustomButton';
 import SocialSignInButtons from '../../components/SocialSignInButtons';
+import { useNavigation } from '@react-navigation/native';
 
 
 
@@ -14,21 +15,25 @@ const SignUpScreen = () => {
   const [email, setEmail] = useState('');
   const [passwordRepeat, setPasswordRepeat] = useState('');
 
-  
+  const navigation = useNavigation();
 
- const onRegisterPressed = () =>  {
-  console.warn('Sign in');
- };
+  const onRegisterPressed = () => {
+    console.warn("Registered")
+    // Validate
+    navigation.navigate('Confirm Email')
+  }
 
+  const onSignInPress = () => {
+    console.warn("onSignInPressed")
+     // Validate
+     navigation.navigate('Sign In')
+  }
 
- const onForgotPasswordPressed = () =>  {
-  console.warn('onForgotPasswordPressed');
- };
-
-
- const onSignInPress = () =>  {
-  console.warn('onSignInPress');
-};
+  const onForgotPasswordPressed = () => {
+    console.warn("onForgotPasswordPressed")
+    // Naviguer vers l'écran de récupération de mot de passe
+    navigation.navigate('Forgot Password')
+  }
 
  return (
   <ScrollView showsHorizontalScrollIndicator= {false}>

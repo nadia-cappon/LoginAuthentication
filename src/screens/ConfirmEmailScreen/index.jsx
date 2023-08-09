@@ -2,23 +2,21 @@ import React, {useState} from 'react';
 import {View,  StyleSheet,  ScrollView, Text} from 'react-native';
 import CustomInPut from '../../components/CustomInPut';
 import CustomButton from '../../components/CustomButton';
+import { useNavigation } from '@react-navigation/native';
 
 
 const ConfirEmailScreen = () => {
-
-
- 
   const [code, setCode] = useState('');
 
-  
+  const navigation = useNavigation();
 
  const onConfirmPressed = () =>  {
-  console.warn('onConfirmPressed');
+  navigation.navigate('HomeScreen');
  };
 
 
  const onResendPress = () =>  {
-  console.warn('onResendPress');
+  navigation.navigate('SignIn');
  };
 
 

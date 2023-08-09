@@ -18,21 +18,22 @@ const navigation = useNavigation();
  const onSignInPressed = () =>  {
   console.warn('Sign in');
 
-  navigation.navigate('Home');
+  navigation.navigate('HomeScreen');
  };
 
 
- const onForgotPasswordPressed = () =>  {
-  navigation.navigate('ForgotPassword');
- };
+ const onForgotPasswordPressed = () => {
+  console.warn("onForgotPasswordPressed")
+  // Validate
+  navigation.navigate('Forgot Password')
+}
 
 
-
-
-
- const onSignUpPress = () =>  {
-  navigation.navigate('SignUp');
-};
+const onSignUpPressed = () => {
+  console.warn("onSignUpPressed")
+   // Validate
+   navigation.navigate('Sign Up')
+}
  return (
   <ScrollView showsHorizontalScrollIndicator= {false}>
     <View style={styles.root}>
@@ -72,7 +73,7 @@ const navigation = useNavigation();
     <SocialSignInButtons />
 <CustomButton
        text="Dont have an acount? Create One" 
-      onPress={onSignUpPress} 
+      onPress={onSignUpPressed} 
       type="TERTIARY"
      
       fgColor="#8C9196" 

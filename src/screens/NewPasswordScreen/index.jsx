@@ -2,23 +2,25 @@ import React, {useState} from 'react';
 import {View,  StyleSheet,  ScrollView, Text} from 'react-native';
 import CustomInPut from '../../components/CustomInPut';
 import CustomButton from '../../components/CustomButton';
-
+import SocialSignInButtons from '../../components/SocialSignInButtons';
+import { useNavigation } from '@react-navigation/native';
+import HomeScreen from '../HomeScreen';
 
 const NewPasswordScreen = () => {
   
 const [code, setCode] = useState('');
 const [newPassword, setNewPassword] = useState('');
 
+const navigation = useNavigation();
+
+
  const onSubmitPressed = () =>  {
-  console.warn('onSubmitPressed');
+ navigation.navigate('HomeScreen');
  };
 
 
- 
-
-
  const onSignInPress = () =>  {
-  console.warn('onSignInPress');
+  navigation.navigate('SignIn');
 };
  return (
   <ScrollView showsHorizontalScrollIndicator= {false}>
